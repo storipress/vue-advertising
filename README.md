@@ -1,4 +1,4 @@
-![vue-advertising](https://user-images.githubusercontent.com/53453555/224673767-26fb7097-d71a-4ba6-bbb5-ce6372e8b86b.png)
+![vue-advertising](https://user-images.githubusercontent.com/53453555/224674120-fe61a13e-3442-408e-896d-00168d6d0ed2.png)
 
 ## Usage
 
