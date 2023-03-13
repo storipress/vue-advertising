@@ -1,5 +1,38 @@
 ![vue-advertising](https://user-images.githubusercontent.com/53453555/224674120-fe61a13e-3442-408e-896d-00168d6d0ed2.png)
 
+<div align="center"><strong>Vue Advertising</strong></div>
+<div align="center">A JavaScript library for display ads in [Vue](https://vuejs.org) applications.</div>
+<br />
+<div align="center">
+<a href="https://storipress.com">Website</a> 
+<span> · </span>
+<a href="https://github.com/storipress/vue-advertising">GitHub</a> 
+<span> · </span>
+<a href="https://join.slack.com/t/storipresscommunity/shared_invite/zt-1krx5nm1d-h_WKy1XF3MSxuY4BQ0VRbQ">Slack</a>
+</div>
+
+## Introduction
+
+Integrate ads in your app the “Vue way". A set of helpers for integrating complex advertising setups in Vue projects. It reduces the pain of integrating advertising in server side rendered projects. It also takes care of bloat by centralising configuration.
+
+One central configuration file for all your Google Publisher Tags and Prebid placements (Prebid is optional). One provider component that handles all the “plumbing” with googletag and pbjs, nicely hidden away. Ad slot components that get filled with creatives from the ad server when they mount to the DOM. Works well in single page applications with multiple routes. Suitable for server-side-rendering. Supports lazy loading, even for Prebid ads, individually configurable per ad slot
+
+## Why
+
+We believe publishing is core to any modern society. However, it is getting more and more difficult to monetise content with advertising, and use modern development tools. Advertising needs a revmp. A renovation. Modernised for the way we create content today.
+
+- One central configuration file for all your Google Publisher Tags and Prebid placements (Prebid is optional)
+- One provider component that handles all the “plumbing” with googletag and pbjs, nicely hidden away
+- Ad slot components that get filled with creatives from the ad server when they mount to the DOM
+- Works well in single page applications with multiple routes
+- Suitable for server-side-rendering
+- Supports lazy loading, even for Prebid ads, individually configurable per ad slot
+
+## Prerequisites
+To use it, you need to have a Google Ad Manager account set up to deliver display ads through Google Publisher Tags (GPT).
+
+Optionally, vue-advertising supports use of real-time header bidding with Prebid.
+
 ## Usage
 
 ### Set up your ad providers
