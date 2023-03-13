@@ -29,9 +29,9 @@ We believe publishing is core to any modern society. However, it is getting more
 ## Prerequisites
 
 ### Google Ad Manager
-To use it, you need to have a Google Ad Manager account set up to deliver display ads through Google Publisher Tags (GPT).
+To use it, you need to have a [Google Ad Manager](https://admanager.google.com) account set up to deliver display ads through [Google Publisher Tags](https://developers.google.com/publisher-tag/guides/get-started) (GPT).
 
-Optionally, vue-advertising supports use of real-time header bidding with Prebid.
+Optionally, vue-advertising supports use of real-time header bidding with [Prebid](https://docs.prebid.org/overview/intro.html).
 
 ### Dependencies
 
