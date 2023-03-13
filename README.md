@@ -1,4 +1,4 @@
-# vue-advertising
+![vue-advertising](https://user-images.githubusercontent.com/53453555/224673767-26fb7097-d71a-4ba6-bbb5-ce6372e8b86b.png)
 
 ## Usage
 
