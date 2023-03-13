@@ -1,28 +1,28 @@
 export interface TAdvertisingSlotConfig {
-  id: string
-  path?: string
-  collapseEmptyDiv?: boolean[]
-  targeting?: object
-  sizes?: string | string[] | number[] | number[][]
-  sizeMappingName?: string
+  id: string;
+  path?: string;
+  collapseEmptyDiv?: boolean[];
+  targeting?: object;
+  sizes?: string | string[] | number[] | number[][];
+  sizeMappingName?: string;
   prebid?: {
     mediaTypes: Record<
       string,
       {
-        sizes?: number[][]
+        sizes?: number[][];
       }
-    >
+    >;
     bids: {
-      bidder: string
-      params?: object
-      labelAny?: string[]
-      labelAll?: string[]
-    }[]
-  }[]
+      bidder: string;
+      params?: object;
+      labelAny?: string[];
+      labelAll?: string[];
+    }[];
+  }[];
   enableLazyLoad?:
     | boolean
     | {
-        marginPercent?: number
-        mobileScaling?: number
-      }
+        marginPercent?: number;
+        mobileScaling?: number;
+      };
 }

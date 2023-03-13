@@ -1,19 +1,21 @@
-import { TAdvertisingConfig } from './AdvertisingConfig'
+import { TAdvertisingConfig } from "./AdvertisingConfig";
 
-export default function isLazyLoading(lazyLoadConfig: TAdvertisingConfig['enableLazyLoad'] | boolean) {
-  if (typeof lazyLoadConfig === 'boolean') {
-    return lazyLoadConfig
+export default function isLazyLoading(
+  lazyLoadConfig: TAdvertisingConfig["enableLazyLoad"] | boolean
+) {
+  if (typeof lazyLoadConfig === "boolean") {
+    return lazyLoadConfig;
   }
 
   if (!lazyLoadConfig) {
-    return false
+    return false;
   }
 
-  const { marginPercent } = lazyLoadConfig
+  const { marginPercent } = lazyLoadConfig;
 
   if (!marginPercent) {
-    return true
+    return true;
   }
 
-  return marginPercent > -1
+  return marginPercent > -1;
 }
