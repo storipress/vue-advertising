@@ -29,16 +29,17 @@ We believe publishing is core to any modern society. However, it is getting more
 ## Prerequisites
 
 ### Google Ad Manager
+
 To use it, you need to have a Google Ad Manager account set up to deliver display ads through Google Publisher Tags (GPT).
 
 Optionally, vue-advertising supports use of real-time header bidding with Prebid.
 
 ### Dependencies
 
-Please note that vue-advertising requires [@vueuse/head](https://github.com/vueuse/head) or [@unhead/vue]((https://github.com/unjs/unhead)) to manage and load scripts. Please make sure you are using a [Nuxt](https://nuxt.com) project or have set up @vueuse/head or @unhead/vue in your project.
-
+Please note that vue-advertising requires [@vueuse/head](https://github.com/vueuse/head) or [@unhead/vue](<(https://github.com/unjs/unhead)>) to manage and load scripts. Please make sure you are using a [Nuxt](https://nuxt.com) project or have set up @vueuse/head or @unhead/vue in your project.
 
 ## Documentation
+
 You can find more info on [react-advertising](https://github.com/KijijiCA/react-advertising)
 
 Below is the basic usage of vue-advertising
@@ -77,12 +78,12 @@ const gptConfig = {
 ```
 
 3. Use `AdvertisingSlot` to display ads in the location where you want to show ads, and note that `AdvertisingSlot` must be used within `AdvertisingProvider`
-    
-    ```vue
-    <AdvertisingSlot id="banner-ad" :is-sticky="true" />
-    ```
-    
-4.  Your ads will now appear!
+
+   ```vue
+   <AdvertisingSlot id="banner-ad" :is-sticky="true" />
+   ```
+
+4. Your ads will now appear!
 
 ### Preload ads (optional)
 
