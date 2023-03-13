@@ -16,4 +16,4 @@ jobs:
           cache: 'yarn'
       - run: yarn
       - run: yarn build
-      - run: yarn test --coverage
+      - run: yarn test
