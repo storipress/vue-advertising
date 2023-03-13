@@ -1,0 +1,13 @@
+version = 1
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = ["vue"]
+
+[[transformers]]
+name = "prettier"
