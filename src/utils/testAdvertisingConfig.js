@@ -1,34 +1,34 @@
-export const DIV_ID_FOO = 'div-gpt-ad-foo'
-const SLOT_ID_FOO = 666
-const PREBID_SIZES_FOO = [[320, 240]]
-const BIDDER_FOO = 'bidder-foo'
-const PARAMS_FOO = { foo: 'bar' }
+export const DIV_ID_FOO = "div-gpt-ad-foo";
+const SLOT_ID_FOO = 666;
+const PREBID_SIZES_FOO = [[320, 240]];
+const BIDDER_FOO = "bidder-foo";
+const PARAMS_FOO = { foo: "bar" };
 
-export const DIV_ID_BAR = 'div-gpt-ad-bar'
-const SLOT_ID_BAR = [11, 666]
-const PREBID_SIZES_BAR = [[320, 240]]
-const BIDDER_BAR = 'bidder-bar'
-const PARAMS_BAR = { bar: 'foo' }
-const COLLAPSE_EMPTY_DIV = [true, true]
+export const DIV_ID_BAR = "div-gpt-ad-bar";
+const SLOT_ID_BAR = [11, 666];
+const PREBID_SIZES_BAR = [[320, 240]];
+const BIDDER_BAR = "bidder-bar";
+const PARAMS_BAR = { bar: "foo" };
+const COLLAPSE_EMPTY_DIV = [true, true];
 
-const GPT_SIZES = ['fluid', [320, 240]]
+const GPT_SIZES = ["fluid", [320, 240]];
 
-const GLOBAL_AD_UNIT_PATH = 'global/ad/unit/path'
-const SLOT_AD_UNIT_PATH = 'slot/ad/unit/path'
-const USD_TO_EUR_RATE = 2
+const GLOBAL_AD_UNIT_PATH = "global/ad/unit/path";
+const SLOT_AD_UNIT_PATH = "slot/ad/unit/path";
+const USD_TO_EUR_RATE = 2;
 
 export const configWithoutSlots = {
   active: true,
   path: GLOBAL_AD_UNIT_PATH,
   aps: {
-    pubID: 'apsid',
+    pubID: "apsid",
     bidTimeout: 2e3,
     deals: true,
   },
   prebid: {
     bidderTimeout: 1500,
-    priceGranularity: 'medium',
-    bidderSequence: 'random',
+    priceGranularity: "medium",
+    bidderSequence: "random",
   },
   sizeMappings: {
     mobailAndTablet: [
@@ -55,20 +55,20 @@ export const configWithoutSlots = {
 
   targeting: {
     eagt: [666],
-    'mt-ab': 'test',
-    'mt-ma': ['Poserwagen'],
-    'mt-mo': ['Brummstinko', 'Grand Umweltverpestino'],
-    'mt-thread': [666],
-    'mt-u2': ['00'],
-    'mt-u4': true,
+    "mt-ab": "test",
+    "mt-ma": ["Poserwagen"],
+    "mt-mo": ["Brummstinko", "Grand Umweltverpestino"],
+    "mt-thread": [666],
+    "mt-u2": ["00"],
+    "mt-u4": true,
   },
   customEvents: {
     collapse: {
-      eventMessagePrefix: 'CloseAdvContainer:',
-      divIdPrefix: 'div-gpt-ad-',
+      eventMessagePrefix: "CloseAdvContainer:",
+      divIdPrefix: "div-gpt-ad-",
     },
   },
-}
+};
 export const config = {
   ...configWithoutSlots,
   slots: [
@@ -97,7 +97,7 @@ export const config = {
       path: SLOT_AD_UNIT_PATH,
       targeting: { a: SLOT_ID_BAR },
       sizes: GPT_SIZES,
-      sizeMappingName: 'mobailAndTablet',
+      sizeMappingName: "mobailAndTablet",
       collapseEmptyDiv: COLLAPSE_EMPTY_DIV,
       prebid: [
         {
@@ -116,4 +116,4 @@ export const config = {
       ],
     },
   ],
-}
+};
