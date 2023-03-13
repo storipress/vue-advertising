@@ -35,7 +35,7 @@ Optionally, vue-advertising supports use of real-time header bidding with Prebid
 
 ### Dependencies
 
-Please note that vue-advertising requires [@vueuse/head](https://github.com/vueuse/head) or [@unhead/vue](https://github.com/unjs/unhead) to manage and load scripts. Please make sure you are using a [Nuxt](https://nuxt.com) project or have set up @vueuse/head or @unhead/vue in your project.
+Please note that vue-advertising requires [`@vueuse/head`](https://github.com/vueuse/head) or [`@unhead/vue`](https://github.com/unjs/unhead) to manage and load scripts. Please make sure you are using a [Nuxt](https://nuxt.com) project or have set up `@vueuse/head` or `@unhead/vue` in your project.
 
 
 ## Documentation
