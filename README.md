@@ -1,4 +1,4 @@
-![vue-advertising](https://user-images.githubusercontent.com/53453555/224681952-d6121325-2397-43e3-b624-3d37d2e09013.png)
+![vue-advertising](https://user-images.githubusercontent.com/53453555/224682423-d42da036-9453-43a0-88b3-2749c7d77a9a.png)
 
 <div align="center"><strong>Vue Advertising</strong></div>
 <div align="center">A JavaScript library for display ads in <a href="https://vuejs.org" target="_blank" rel="noopener noreferer">Vue</a> applications.</div>
