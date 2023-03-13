@@ -17,7 +17,7 @@ Integrate ads in your app the “Vue way". A set of helpers for integrating comp
 
 ## Why
 
-We believe publishing is core to any modern society. However, it is getting more and more difficult to monetise content with advertising, and use modern development tools. Advertising needs a revmp. A renovation. Modernised for the way we create content today.
+We believe content is core to any modern society. However, it is getting more and more difficult to monetise content with advertising, whilst using modern development tools. Advertising needs a revamp. A renovation. Modernised for the way we create content today.
 
 - One central configuration file for all your Google Publisher Tags and Prebid placements (Prebid is optional)
 - One provider component that handles all the “plumbing” with googletag and pbjs, nicely hidden away
@@ -35,7 +35,7 @@ Optionally, vue-advertising supports use of real-time header bidding with [Prebi
 
 ### Dependencies
 
-Please note that vue-advertising requires [`@vueuse/head`](https://github.com/vueuse/head) or [`@unhead/vue`](https://github.com/unjs/unhead) to manage and load scripts. Please make sure you are using a [Nuxt](https://nuxt.com) project or have set up `@vueuse/head` or `@unhead/vue` in your project.
+vue-advertising requires [`@vueuse/head`](https://github.com/vueuse/head) or [`@unhead/vue`](https://github.com/unjs/unhead) to manage and load scripts. Please make sure you are using [Nuxt](https://nuxt.com), or have set up `@vueuse/head` or `@unhead/vue` in your project.
 
 
 ## Documentation
