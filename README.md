@@ -2,9 +2,9 @@
 
 ## Usage
 
-### How to set advertising
+### Set up your ad providers
 
-1. Create a `GPT` config 
+1. Create your `GPT` config 
 
 ```
 const gptConfig = {
@@ -25,7 +25,7 @@ const gptConfig = {
 }
 ```
 
-2. Wrap the entire area that you want to display ad with `AdvertisingProvider` to provide the config
+2. In places you want to show advertising, wrap the area with `AdvertisingProvider` so information in your config file is passed to the ad slot.
 
 ```
 <template>
@@ -35,18 +35,18 @@ const gptConfig = {
 </template>
 ```
 
-3.  Place `AdvertisingSlot` to the position that you want to insert ad inside `AdvertisingProvider`
+3.  Place the `AdvertisingSlot` in the position you want to insert an ad inside `AdvertisingProvider`
     
     ```html
     <AdvertisingSlot id="banner-ad" :is-sticky="true" />
     ```
     
-4. You will see advertise appear
+4. Your ads will now appear!
 
 
-### Preload the advertising
+### Preload ads (optional)
 
-Use `GlobalAdvertisingProvider` and `GlobalAdvertisingSlot`, ads can be loaded as fast as possible (need to use `@vueuse/head` or `@unhead/vue` to preload the script)
+Using `GlobalAdvertisingProvider` and `GlobalAdvertisingSlot`, ads can be preloaded to ensure maximum viewability (you will need to use `@vueuse/head` or `@unhead/vue` to preload the script)
 
 ## Credits
 
