@@ -15,8 +15,6 @@
 
 Integrate ads in your app the “Vue way". A set of helpers for integrating complex advertising setups in Vue projects. It reduces the pain of integrating advertising in server side rendered projects. It also takes care of bloat by centralising configuration.
 
-One central configuration file for all your Google Publisher Tags and Prebid placements (Prebid is optional). One provider component that handles all the “plumbing” with googletag and pbjs, nicely hidden away. Ad slot components that get filled with creatives from the ad server when they mount to the DOM. Works well in single page applications with multiple routes. Suitable for server-side-rendering. Supports lazy loading, even for Prebid ads, individually configurable per ad slot
-
 ## Why
 
 We believe publishing is core to any modern society. However, it is getting more and more difficult to monetise content with advertising, and use modern development tools. Advertising needs a revmp. A renovation. Modernised for the way we create content today.
