@@ -1,7 +1,7 @@
 ![vue-advertising](https://user-images.githubusercontent.com/53453555/224674120-fe61a13e-3442-408e-896d-00168d6d0ed2.png)
 
 <div align="center"><strong>Vue Advertising</strong></div>
-<div align="center">A JavaScript library for display ads in [Vue](https://vuejs.org) applications.</div>
+<div align="center">A JavaScript library for display ads in <a href="https://vuejs.org" target="_blank" rel="noopener noreferer">Vue</a> applications.</div>
 <br />
 <div align="center">
 <a href="https://storipress.com">Website</a> 
@@ -27,11 +27,21 @@ We believe publishing is core to any modern society. However, it is getting more
 - Supports lazy loading, even for Prebid ads, individually configurable per ad slot
 
 ## Prerequisites
+
+### Google Ad Manager
 To use it, you need to have a Google Ad Manager account set up to deliver display ads through Google Publisher Tags (GPT).
 
 Optionally, vue-advertising supports use of real-time header bidding with Prebid.
 
-## Usage
+### Dependencies
+
+Please note that vue-advertising requires [@vueuse/head](https://github.com/vueuse/head) or [@unhead/vue]((https://github.com/unjs/unhead)) to manage and load scripts. Please make sure you are using a [Nuxt](https://nuxt.com) project or have set up @vueuse/head or @unhead/vue in your project.
+
+
+## Documentation
+You can find more info on [react-advertising](https://github.com/KijijiCA/react-advertising)
+
+Below is the basic usage of vue-advertising
 
 ### Set up your ad providers
 
@@ -56,7 +66,7 @@ const gptConfig = {
 }
 ```
 
-2. In places you want to show advertising, wrap the area with `AdvertisingProvider` so information in your config file is passed to the ad slot.
+2. In places you want to show advertising, wrap the area with `AdvertisingProvider` and provide the config from the previous step, so information in your config is passed to the ad slot.
 
 ```
 <template>
@@ -66,17 +76,19 @@ const gptConfig = {
 </template>
 ```
 
-3.  Place the `AdvertisingSlot` in the position you want to insert an ad inside `AdvertisingProvider`
-
-    ```html
+3. Use `AdvertisingSlot` to display ads in the location where you want to show ads, and note that `AdvertisingSlot` must be used within `AdvertisingProvider`
+    
+    ```vue
     <AdvertisingSlot id="banner-ad" :is-sticky="true" />
     ```
-
+    
 4.  Your ads will now appear!
 
 ### Preload ads (optional)
 
-Using `GlobalAdvertisingProvider` and `GlobalAdvertisingSlot`, ads can be preloaded to ensure maximum viewability (you will need to use `@vueuse/head` or `@unhead/vue` to preload the script)
+**vue-advertising only**
+
+Replacing `AdvertisingProvider` with `GlobalAdvertisingProvider` and `AdvertisingSlot` with `GlobalAdvertisingSlot` can speed up the loading of ads.
 
 ## Credits
 
