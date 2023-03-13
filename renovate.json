@@ -4,7 +4,13 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch", "pin", "lockFileMaintenance", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "lockFileMaintenance",
+        "digest"
+      ],
       "automerge": true
     }
   ],
