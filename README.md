@@ -4,7 +4,7 @@
 
 ### Set up your ad providers
 
-1. Create your `GPT` config 
+1. Create your `GPT` config
 
 ```
 const gptConfig = {
@@ -36,13 +36,12 @@ const gptConfig = {
 ```
 
 3.  Place the `AdvertisingSlot` in the position you want to insert an ad inside `AdvertisingProvider`
-    
+
     ```html
     <AdvertisingSlot id="banner-ad" :is-sticky="true" />
     ```
-    
-4. Your ads will now appear!
 
+4.  Your ads will now appear!
 
 ### Preload ads (optional)
 
