@@ -29,6 +29,7 @@ We believe publishing is core to any modern society. However, it is getting more
 - Supports lazy loading, even for Prebid ads, individually configurable per ad slot
 
 ## Prerequisites
+
 To use it, you need to have a Google Ad Manager account set up to deliver display ads through Google Publisher Tags (GPT).
 
 Optionally, vue-advertising supports use of real-time header bidding with Prebid.
