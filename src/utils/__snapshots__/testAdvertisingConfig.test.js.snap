@@ -1,0 +1,162 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`The test advertising configuration for unit tests > is correct 1`] = `
+{
+  "active": true,
+  "aps": {
+    "bidTimeout": 2000,
+    "deals": true,
+    "pubID": "apsid",
+  },
+  "customEvents": {
+    "collapse": {
+      "divIdPrefix": "div-gpt-ad-",
+      "eventMessagePrefix": "CloseAdvContainer:",
+    },
+  },
+  "metaData": {
+    "usdToEurRate": 2,
+  },
+  "path": "global/ad/unit/path",
+  "prebid": {
+    "bidderSequence": "random",
+    "bidderTimeout": 1500,
+    "priceGranularity": "medium",
+  },
+  "sizeMappings": {
+    "mobailAndTablet": [
+      {
+        "sizes": [],
+        "viewPortSize": [
+          0,
+          0,
+        ],
+      },
+      {
+        "sizes": [
+          [
+            300,
+            250,
+          ],
+          [
+            320,
+            50,
+          ],
+        ],
+        "viewPortSize": [
+          320,
+          700,
+        ],
+      },
+      {
+        "sizes": [],
+        "viewPortSize": [
+          1050,
+          200,
+        ],
+      },
+    ],
+  },
+  "slots": [
+    {
+      "id": "div-gpt-ad-foo",
+      "prebid": [
+        {
+          "bids": [
+            {
+              "bidder": "bidder-foo",
+              "params": {
+                "foo": "bar",
+              },
+            },
+          ],
+          "mediaTypes": {
+            "banner": {
+              "sizes": [
+                [
+                  320,
+                  240,
+                ],
+              ],
+            },
+          },
+        },
+      ],
+      "sizes": [
+        "fluid",
+        [
+          320,
+          240,
+        ],
+      ],
+      "targeting": {
+        "a": 666,
+      },
+    },
+    {
+      "collapseEmptyDiv": [
+        true,
+        true,
+      ],
+      "id": "div-gpt-ad-bar",
+      "path": "slot/ad/unit/path",
+      "prebid": [
+        {
+          "bids": [
+            {
+              "bidder": "bidder-bar",
+              "params": {
+                "bar": "foo",
+              },
+            },
+          ],
+          "mediaTypes": {
+            "banner": {
+              "sizes": [
+                [
+                  320,
+                  240,
+                ],
+              ],
+            },
+          },
+        },
+      ],
+      "sizeMappingName": "mobailAndTablet",
+      "sizes": [
+        "fluid",
+        [
+          320,
+          240,
+        ],
+      ],
+      "targeting": {
+        "a": [
+          11,
+          666,
+        ],
+      },
+    },
+  ],
+  "targeting": {
+    "eagt": [
+      666,
+    ],
+    "mt-ab": "test",
+    "mt-ma": [
+      "Poserwagen",
+    ],
+    "mt-mo": [
+      "Brummstinko",
+      "Grand Umweltverpestino",
+    ],
+    "mt-thread": [
+      666,
+    ],
+    "mt-u2": [
+      "00",
+    ],
+    "mt-u4": true,
+  },
+}
+`;

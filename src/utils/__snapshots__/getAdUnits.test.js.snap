@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`When I get ad units from a given config > the result > is correct 1`] = `
+[
+  {
+    "bids": [
+      {
+        "bidder": "bidder-foo",
+        "params": {
+          "foo": "bar",
+        },
+      },
+    ],
+    "code": "div-gpt-ad-foo",
+    "mediaTypes": {
+      "banner": {
+        "sizes": [
+          [
+            320,
+            240,
+          ],
+        ],
+      },
+    },
+  },
+  {
+    "bids": [
+      {
+        "bidder": "bidder-bar",
+        "params": {
+          "bar": "foo",
+        },
+      },
+    ],
+    "code": "div-gpt-ad-bar",
+    "mediaTypes": {
+      "banner": {
+        "sizes": [
+          [
+            320,
+            240,
+          ],
+        ],
+      },
+    },
+  },
+]
+`;
