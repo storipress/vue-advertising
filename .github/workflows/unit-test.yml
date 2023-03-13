@@ -1,0 +1,19 @@
+name: Unit Test
+
+on: [push]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    name: Test
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - run: yarn
+      - run: yarn build
+      - run: yarn test
