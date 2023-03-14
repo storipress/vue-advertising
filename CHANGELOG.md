@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.0 (2023-03-14)
+
+
+### Features
+
+* initial release ([e0c5fd6](https://github.com/storipress/vue-advertising/commit/e0c5fd6703a222b31661c74780cabd1932804f63))
+
+
+### Bug Fixes
+
+* fix auth issue ([348bf23](https://github.com/storipress/vue-advertising/commit/348bf23decc2f8f17cb792643100e8a42a8528ae))
+* set yarn version to berry ([7c888cf](https://github.com/storipress/vue-advertising/commit/7c888cf813da294133eeae734757a3d34b2820d9))
+
 ## [1.0.0](https://github.com/storipress/vue-advertising/compare/v1.0.0...v1.0.0) (2023-03-14)
 
 
