@@ -1,6 +1,6 @@
 {
   "name": "@storipress/vue-advertising",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "repository": "git@github.com:storipress/framework-scaffolding.git",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
