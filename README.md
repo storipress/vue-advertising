@@ -17,7 +17,7 @@ Integrate ads in your app the “Vue way". A set of helpers for integrating comp
 
 ## Why
 
-We believe content is core to any modern society. However, it is getting more and more difficult to monetise content with advertising, whilst using modern development tools. Advertising needs a revamp. A renovation. Modernised for the way we create content today.
+We believe content is core to any modern society. However, it is getting more and more difficult to monetise content with advertising whilst using modern development tools. Advertising needs a revamp. A renovation. Modernised for the way we create content today.
 
 - One central configuration file for all your Google Publisher Tags and Prebid placements (Prebid is optional)
 - One provider component that handles all the “plumbing” with googletag and pbjs, nicely hidden away
