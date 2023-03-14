@@ -1,7 +1,11 @@
 {
   "name": "@storipress/vue-advertising",
   "version": "1.0.0",
-  "repository": "git@github.com:storipress/framework-scaffolding.git",
+  "repository": "git@github.com:storipress/vue-advertising.git",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/storipress/vue-advertising/issues"
+  },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "type": "module",
@@ -23,9 +27,6 @@
     "!dist/**/*.test.mjs",
     "!dist/**/__snapshots__/**"
   ],
-  "publishConfig": {
-    "access": "restricted"
-  },
   "dependencies": {
     "@guanghechen/fast-deep-equal": "^2.2.4",
     "@vueuse/core": "^9.13.0",
