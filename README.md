@@ -36,11 +36,11 @@ Optionally, vue-advertising real-time header bidding with [Prebid](https://docs.
 
 ### Dependencies
 
-vue-advertising requires [`@vueuse/head`](https://github.com/vueuse/head) or [`@unhead/vue`](https://github.com/unjs/unhead) to manage and load scripts. Please make sure you are using [Nuxt](https://nuxt.com), or have set up `@vueuse/head` or `@unhead/vue` in your project.
+vue-advertising requires [`@vueuse/head`](https://github.com/vueuse/head) or [`@unhead/vue`](https://github.com/unjs/unhead) to manage and load scripts. Please make sure you are using [Karbon](https://github.com/storipress/karbon) or [Nuxt](https://nuxt.com), or have set up `@vueuse/head` or `@unhead/vue` in your project.
 
 ## Documentation
 
-You can find more info on [react-advertising](https://github.com/KijijiCA/react-advertising)
+You can find more info in [react-advertising](https://github.com/KijijiCA/react-advertising) (the original library which we ported to Vue)
 
 Below is the basic usage of vue-advertising
 
