@@ -2,6 +2,7 @@ import { createInjectionState } from '@vueuse/core'
 import type { Ref } from 'vue'
 import type { TAdvertisingConfig } from './components/utils/AdvertisingConfig'
 import type Advertising from './Advertising'
+import { ref } from 'vue'
 
 interface TAdvertisingContext {
   activate: Ref<((id: string, customEventHandlers: Record<string, () => void>) => Advertising | void) | undefined>
