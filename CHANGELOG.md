@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/storipress/vue-advertising/compare/v1.0.0...v1.0.1) (2023-03-25)
+
+
+### Bug Fixes
+
+* add ref ([1a98877](https://github.com/storipress/vue-advertising/commit/1a988773a7a2221a9935008f5d74ecabf98a166b))
+
 ## [1.0.0](https://github.com/storipress/vue-advertising/compare/v1.0.0...v1.0.0) (2023-03-14)
 
 
