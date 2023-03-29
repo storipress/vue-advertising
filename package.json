@@ -6,6 +6,10 @@
   "bugs": {
     "url": "https://github.com/storipress/vue-advertising/issues"
   },
+  "workspaces": [
+    ".",
+    "playground"
+  ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "type": "module",
@@ -29,6 +33,7 @@
   ],
   "dependencies": {
     "@guanghechen/fast-deep-equal": "^2.2.4",
+    "@nuxt/kit": "^3.3.2",
     "@vueuse/core": "^9.13.0",
     "vue3-lazy-hydration": "^1.2.1"
   },

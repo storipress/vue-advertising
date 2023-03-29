@@ -1,4 +1,5 @@
 import { defineNuxtModule, addComponent, createResolver } from '@nuxt/kit'
+
 const AD_COMPONENTS = ['AdvertisingProvider', 'AdvertisingSlot', 'GlobalAdvertisingProvider', 'GlobalAdvertisingSlot']
 
 export default defineNuxtModule({
