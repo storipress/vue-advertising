@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/storipress/vue-advertising/compare/v1.0.1...v1.1.0) (2023-03-31)
+
+
+### Features
+
+* add advertising demo and module ([6b6ebce](https://github.com/storipress/vue-advertising/commit/6b6ebcefd52d970451452673a8e5b5ffb445a478))
+
 ## [1.0.1](https://github.com/storipress/vue-advertising/compare/v1.0.0...v1.0.1) (2023-03-25)
 
 
