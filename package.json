@@ -49,7 +49,7 @@
     "@unhead/vue": "1.1.25",
     "happy-dom": "8.9.0",
     "sass": "1.61.0",
-    "typescript": "5.0.3",
+    "typescript": "5.0.4",
     "unbuild": "1.2.0",
     "vite": "4.2.1",
     "vitest": "0.29.8",
