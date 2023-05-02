@@ -971,7 +971,7 @@ __metadata:
     "@nuxt/kit": 3.4.3
     "@unhead/vue": 1.1.26
     "@vueuse/core": ^9.13.0
-    happy-dom: 9.10.1
+    happy-dom: 9.10.2
     nuxt: 3.4.3
     sass: 1.62.1
     typescript: 5.0.4
@@ -993,7 +993,7 @@ __metadata:
     "@nuxt/kit": ^3.3.2
     "@unhead/vue": 1.1.26
     "@vueuse/core": ^9.13.0
-    happy-dom: 9.10.1
+    happy-dom: 9.10.2
     sass: 1.62.1
     typescript: 5.0.4
     unbuild: 1.2.1
@@ -3231,9 +3231,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:9.10.1":
-  version: 9.10.1
-  resolution: "happy-dom@npm:9.10.1"
+"happy-dom@npm:9.10.2":
+  version: 9.10.2
+  resolution: "happy-dom@npm:9.10.2"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
@@ -3241,7 +3241,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 282cd16c67a7cf9fd5dbc20f112a2e36092bfa2cab53c21a59db8078c4151483e8c45eaf8889edd4537f00738bf3d5c0140fdab8a49a6929b076ce20c8e1e731
+  checksum: c196f558e901c1474f2bfe7908e4df0254198a1edb525afee1feb4e099d4d1da9f4ead1e1b4fa07cc71fb5f74982053d433387d0015fa210a665e2fff1cdde9b
   languageName: node
   linkType: hard
 
