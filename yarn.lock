@@ -971,7 +971,7 @@ __metadata:
     "@nuxt/kit": 3.4.3
     "@unhead/vue": 1.1.26
     "@vueuse/core": ^9.13.0
-    happy-dom: 9.11.0
+    happy-dom: 9.16.0
     nuxt: 3.4.3
     sass: 1.62.1
     typescript: 5.0.4
@@ -993,7 +993,7 @@ __metadata:
     "@nuxt/kit": ^3.3.2
     "@unhead/vue": 1.1.26
     "@vueuse/core": ^9.13.0
-    happy-dom: 9.11.0
+    happy-dom: 9.16.0
     sass: 1.62.1
     typescript: 5.0.4
     unbuild: 1.2.1
@@ -2624,10 +2624,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^4.2.0":
-  version: 4.4.0
-  resolution: "entities@npm:4.4.0"
-  checksum: 84d250329f4b56b40fa93ed067b194db21e8815e4eb9b59f43a086f0ecd342814f6bc483de8a77da5d64e0f626033192b1b4f1792232a7ea6b970ebe0f3187c2
+"entities@npm:^4.2.0, entities@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "entities@npm:4.5.0"
+  checksum: 853f8ebd5b425d350bffa97dd6958143179a5938352ccae092c62d1267c4e392a039be1bae7d51b6e4ffad25f51f9617531fedf5237f15df302ccfb452cbf2d7
   languageName: node
   linkType: hard
 
@@ -3231,17 +3231,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:9.11.0":
-  version: 9.11.0
-  resolution: "happy-dom@npm:9.11.0"
+"happy-dom@npm:9.16.0":
+  version: 9.16.0
+  resolution: "happy-dom@npm:9.16.0"
   dependencies:
     css.escape: ^1.5.1
-    he: ^1.2.0
+    entities: ^4.5.0
     iconv-lite: ^0.6.3
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 9fd96c49e67536b54e2f8de7f695887ae67f629ab68dfff08a5c48d9247f6b022ef19ddefe399ebd7a3b711b2bbbecbdcdd5cd5ea3f5b65e033ad06cdf7f7850
+  checksum: 2a35f7dda443bd5854de0cce1f9237e7ac15955d9b4e058bca6c5fa7b3b0faef20f95830ddc93b765df541874ad31fe4e90f0c5b51f560e99b47a86dca2ff921
   languageName: node
   linkType: hard
 
@@ -3279,15 +3279,6 @@ __metadata:
   version: 2.0.0
   resolution: "hash-sum@npm:2.0.0"
   checksum: efeeacf09ecbd467202865403c3a1991fa15d4f4903c1148ecbe13223fdbf9ec6d7dc661e17e5ce6e776cd70d67b6ee4c82e0171318962435be45c1155175f3f
-  languageName: node
-  linkType: hard
-
-"he@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "he@npm:1.2.0"
-  bin:
-    he: bin/he
-  checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
   languageName: node
   linkType: hard
 
