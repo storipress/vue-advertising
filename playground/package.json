@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "@guanghechen/fast-deep-equal": "^2.2.4",
-    "@vueuse/core": "^9.13.0",
+    "@vueuse/core": "^10.0.0",
     "vue3-lazy-hydration": "^1.2.1"
   },
   "peerDependencies": {
