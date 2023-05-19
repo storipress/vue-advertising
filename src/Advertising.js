@@ -56,7 +56,7 @@ export default class Advertising {
       return
     }
     this.setCustomEventCallbackByQueue(queue)
-    const { divIds, selectedSlots } = getDivIdsAndSlots(queue, outOfPageSlots, slots)
+    const { divIds, selectedSlots } = this.getDivIdsAndSlots(queue, outOfPageSlots, slots)
 
     if (isPrebidUsed) {
       Advertising.queueForPrebid(this.getPbjFetchBidsCallback(divIds, selectedSlots), this.onError)
