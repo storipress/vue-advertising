@@ -1,14 +1,3 @@
-const EXECUTE_PLUGINS_ACTION = {
-  SETUP: 'setup',
-  DISPLAYSLOTS: 'displaySlots',
-  DISPLAYOUTOFPAGESLOT: 'displayOutOfPageSlot',
-  REFRESHINTERSTITIALSLOT: 'refreshInterstitialSlot',
-  SETUPPREBID: 'setupPrebid',
-  TEARDOWNPREBID: 'teardownPrebid',
-  SETUPGPT: 'setupGpt',
-  TEARDOWNGPT: 'teardownGpt',
-}
-
 export default class Advertising {
   constructor(config, plugins = [], onError = () => { }) {
     this.config = config
@@ -25,13 +14,22 @@ export default class Advertising {
       marginPercent: 0,
       mobileScaling: 1,
     }
+    this.EXECUTE_PLUGINS_ACTION = {
+      SETUP: 'setup',
+      DISPLAYSLOTS: 'displaySlots',
+      DISPLAYOUTOFPAGESLOT: 'displayOutOfPageSlot',
+      REFRESHINTERSTITIALSLOT: 'refreshInterstitialSlot',
+      SETUPPREBID: 'setupPrebid',
+      TEARDOWNPREBID: 'teardownPrebid',
+      SETUPGPT: 'setupGpt',
+      TEARDOWNGPT: 'teardownGpt',
+    }
 
     this.requestManager = {
       aps: false,
       prebid: false,
     }
   }
-
 
   // ---------- PUBLIC METHODS ----------
 
@@ -40,7 +38,7 @@ export default class Advertising {
       typeof this.config.usePrebid === 'undefined' ? typeof window.pbjs !== 'undefined' : this.config.usePrebid
     this.isAPSUsed =
       typeof this.config.useAPS === 'undefined' ? typeof window.apstag !== 'undefined' : this.config.useAPS
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.SETUP)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUP)
     const { slots, outOfPageSlots, queue, isPrebidUsed, isAPSUsed } = this
     this.setupCustomEvents()
     const setUpQueueItems = [Advertising.queueForGPT(this.setupGpt.bind(this), this.onError)]
@@ -59,7 +57,7 @@ export default class Advertising {
     const { divIds, selectedSlots } = this.getDivIdsAndSlots(queue, outOfPageSlots, slots)
 
     if (isPrebidUsed) {
-      Advertising.queueForPrebid(this.getPbjFetchBidsCallback(divIds, selectedSlots), this.onError)
+      Advertising.queueForPrebid(this.getPrebidFetchBidsCallback(divIds, selectedSlots), this.onError)
     }
 
     if (this.isAPSUsed) {
@@ -93,11 +91,11 @@ export default class Advertising {
     this.setCustomEventCallback(id, customEventHandlers)
 
     if (isPrebidUsed) {
-      Advertising.queueForPrebid(this.getPbjFetchBidsCallback([id], [slots[id].gpt]), this.onError)
+      Advertising.queueForPrebid(this.getPrebidFetchBidsCallback([id], [slots[id].gpt]), this.onError)
     }
 
     if (this.isAPSUsed) {
-      this.apstagFetchBids([slots[id]], [slots[id].gpt]);
+      this.apstagFetchBids([slots[id]], [slots[id].gpt])
     }
 
     if (!this.isPrebidUsed && !this.isAPSUsed) {
@@ -134,7 +132,7 @@ export default class Advertising {
     }
   }
 
-  getPbjFetchBidsCallback(divIds, selectedSlots) {
+  getPrebidFetchBidsCallback(divIds, selectedSlots) {
     return () =>
       window.pbjs.requestBids({
         adUnitCodes: divIds,
@@ -150,7 +148,7 @@ export default class Advertising {
     const divIds = []
     const selectedSlots = []
     queue.forEach((item) => {
-      const { id } = item;
+      const { id } = item
       if (id) {
         divIds.push(item)
       }
@@ -311,14 +309,14 @@ export default class Advertising {
   }
 
   displaySlots() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.DISPLAYSLOTS)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.DISPLAYSLOTS)
     this.config.slots.forEach(({ id }) => {
       window.googletag.display(id)
     })
   }
 
   displayOutOfPageSlots() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.DISPLAYOUTOFPAGESLOT)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.DISPLAYOUTOFPAGESLOT)
     if (this.config.outOfPageSlots) {
       this.config.outOfPageSlots.forEach(({ id }) => {
         window.googletag.display(id)
@@ -327,7 +325,7 @@ export default class Advertising {
   }
 
   refreshInterstitialSlot() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.REFRESHINTERSTITIALSLOT)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.REFRESHINTERSTITIALSLOT)
     if (this.interstitialSlot) {
       window.googletag.pubads().refresh([this.interstitialSlot])
     }
@@ -348,19 +346,19 @@ export default class Advertising {
   }
 
   setupPrebid() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.SETUPPREBID)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUPPREBID)
     const adUnits = this.getAdUnits(this.config.slots)
     window.pbjs.addAdUnits(adUnits)
     window.pbjs.setConfig(this.config.prebid)
   }
 
   teardownPrebid() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.TEARDOWNPREBID)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.TEARDOWNPREBID)
     this.getAdUnits(this.config.slots).forEach(({ code }) => window.pbjs.removeAdUnit(code))
   }
 
   setupGpt() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.SETUPGPT)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUPGPT)
     const pubads = window.googletag.pubads()
     const { targeting } = this.config
     this.defineGptSizeMappings()
@@ -382,7 +380,7 @@ export default class Advertising {
   }
 
   teardownGpt() {
-    this.executePlugins(EXECUTE_PLUGINS_ACTION.TEARDOWNGPT)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.TEARDOWNGPT)
     window.googletag.destroySlots()
   }
 
