@@ -1,5 +1,11 @@
 export default class Advertising {
-  constructor(config, plugins = [], onError = () => { }) {
+  constructor(
+    config,
+    plugins = [],
+    onError = () => {
+      // intentionally empty. <default function>
+    }
+  ) {
     this.config = config
     this.slots = {}
     this.outOfPageSlots = {}
@@ -39,7 +45,7 @@ export default class Advertising {
     this.isAPSUsed =
       typeof this.config.useAPS === 'undefined' ? typeof window.apstag !== 'undefined' : this.config.useAPS
     this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUP)
-    const { slots, outOfPageSlots, queue, isPrebidUsed, isAPSUsed } = this
+    const { queue, isPrebidUsed, isAPSUsed } = this
     this.setupCustomEvents()
     const setUpQueueItems = [Advertising.queueForGPT(this.setupGpt.bind(this), this.onError)]
     if (isAPSUsed) {
@@ -54,7 +60,7 @@ export default class Advertising {
       return
     }
     this.setCustomEventCallbackByQueue(queue)
-    const { divIds, selectedSlots } = this.getDivIdsAndSlots(queue, outOfPageSlots, slots)
+    const { divIds, selectedSlots } = this.getDivIdsAndSlots()
 
     if (isPrebidUsed) {
       Advertising.queueForPrebid(this.getPrebidFetchBidsCallback(divIds, selectedSlots), this.onError)
@@ -144,7 +150,8 @@ export default class Advertising {
       })
   }
 
-  getDivIdsAndSlots(queue, outOfPageSlots, slots) {
+  getDivIdsAndSlots() {
+    const { queue, outOfPageSlots, slots } = this
     const divIds = []
     const selectedSlots = []
     queue.forEach((item) => {
@@ -331,8 +338,8 @@ export default class Advertising {
     }
   }
 
-  getAdUnits(slots) {
-    return slots.reduce(
+  getAdUnits() {
+    return this.config.slots.reduce(
       (acc, currSlot) =>
         acc.concat(
           currSlot.prebid.map((currPrebid) => ({
@@ -347,14 +354,14 @@ export default class Advertising {
 
   setupPrebid() {
     this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUPPREBID)
-    const adUnits = this.getAdUnits(this.config.slots)
+    const adUnits = this.getAdUnits()
     window.pbjs.addAdUnits(adUnits)
     window.pbjs.setConfig(this.config.prebid)
   }
 
   teardownPrebid() {
     this.executePlugins(this.EXECUTE_PLUGINS_ACTION.TEARDOWNPREBID)
-    this.getAdUnits(this.config.slots).forEach(({ code }) => window.pbjs.removeAdUnit(code))
+    this.getAdUnits().forEach(({ code }) => window.pbjs.removeAdUnit(code))
   }
 
   setupGpt() {
