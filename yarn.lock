@@ -688,7 +688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.5.2, @nuxt/kit@npm:^3.3.2, @nuxt/kit@npm:^3.3.3":
+"@nuxt/kit@npm:3.5.2":
   version: 3.5.2
   resolution: "@nuxt/kit@npm:3.5.2"
   dependencies:
@@ -714,6 +714,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nuxt/kit@npm:3.5.3, @nuxt/kit@npm:^3.3.2, @nuxt/kit@npm:^3.3.3":
+  version: 3.5.3
+  resolution: "@nuxt/kit@npm:3.5.3"
+  dependencies:
+    "@nuxt/schema": 3.5.3
+    c12: ^1.4.1
+    consola: ^3.1.0
+    defu: ^6.1.2
+    globby: ^13.1.4
+    hash-sum: ^2.0.0
+    ignore: ^5.2.4
+    jiti: ^1.18.2
+    knitwork: ^1.0.0
+    mlly: ^1.3.0
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    scule: ^1.0.0
+    semver: ^7.5.1
+    unctx: ^2.3.1
+    unimport: ^3.0.7
+    untyped: ^1.3.2
+  checksum: 9ca83d488f77b52e51ec7ba2dec4ddc78172aa8f636fb5df22205c462872b8c235be2a4590d037a6f9bc4e85127da60cc2c5f5c81cadc4c678b717e895a4ab0e
+  languageName: node
+  linkType: hard
+
 "@nuxt/schema@npm:3.5.2":
   version: 3.5.2
   resolution: "@nuxt/schema@npm:3.5.2"
@@ -728,6 +753,23 @@ __metadata:
     unimport: ^3.0.7
     untyped: ^1.3.2
   checksum: 3ee7481b1ed9000ff9eb88bf3f0b8443b038a5bf6caf29c3e70e081b90a5d352184b900ef3db3f962f3ae5759b134350505d62ccf252e93dcd5ca9ddd7ff7a47
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.5.3":
+  version: 3.5.3
+  resolution: "@nuxt/schema@npm:3.5.3"
+  dependencies:
+    defu: ^6.1.2
+    hookable: ^5.5.3
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    postcss-import-resolver: ^2.0.0
+    std-env: ^3.3.3
+    ufo: ^1.1.2
+    unimport: ^3.0.7
+    untyped: ^1.3.2
+  checksum: 615f51363a3b6b0877a6f65f53ec42d1c7683e92492fc9d67115517486ae92705abec77b73bcec73e9d5b2630766dba1eb25cdfedd11284700d40ed2c1fd10ab
   languageName: node
   linkType: hard
 
@@ -969,7 +1011,7 @@ __metadata:
   resolution: "@storipress/vue-advertising-playground@workspace:playground"
   dependencies:
     "@guanghechen/fast-deep-equal": ^2.2.4
-    "@nuxt/kit": 3.5.2
+    "@nuxt/kit": 3.5.3
     "@unhead/vue": 1.1.27
     "@vueuse/core": ^10.0.0
     happy-dom: 9.20.3
@@ -4951,10 +4993,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pathe@npm:^1.0.0, pathe@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "pathe@npm:1.1.0"
-  checksum: 6b9be9968ea08a90c0824934799707a1c6a1ad22ac1f22080f377e3f75856d5e53a331b01d327329bfce538a14590587cfb250e8e7947f64408797c84c252056
+"pathe@npm:^1.0.0, pathe@npm:^1.1.0, pathe@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "pathe@npm:1.1.1"
+  checksum: 34ab3da2e5aa832ebc6a330ffe3f73d7ba8aec6e899b53b8ec4f4018de08e40742802deb12cf5add9c73b7bf719b62c0778246bd376ca62b0fb23e0dde44b759
   languageName: node
   linkType: hard
 
