@@ -851,7 +851,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.6.1, @nuxt/kit@npm:^3.3.2, @nuxt/kit@npm:^3.3.3":
+"@nuxt/kit@npm:3.6.1":
   version: 3.6.1
   resolution: "@nuxt/kit@npm:3.6.1"
   dependencies:
@@ -876,6 +876,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nuxt/kit@npm:3.6.2, @nuxt/kit@npm:^3.3.2, @nuxt/kit@npm:^3.3.3":
+  version: 3.6.2
+  resolution: "@nuxt/kit@npm:3.6.2"
+  dependencies:
+    "@nuxt/schema": 3.6.2
+    c12: ^1.4.2
+    consola: ^3.2.2
+    defu: ^6.1.2
+    globby: ^13.2.1
+    hash-sum: ^2.0.0
+    ignore: ^5.2.4
+    jiti: ^1.19.1
+    knitwork: ^1.0.0
+    mlly: ^1.4.0
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    scule: ^1.0.0
+    semver: ^7.5.3
+    unctx: ^2.3.1
+    unimport: ^3.0.14
+    untyped: ^1.3.2
+  checksum: 31670b6ccb14fc09f7a2f4b4484a176195ce2c27191e0d46aad4204ef91cfa9b6deb7fcc2103304d98575d371920a24e91ab8f35b02f84e13dcb9f2e77e7a8e1
+  languageName: node
+  linkType: hard
+
 "@nuxt/schema@npm:3.6.1":
   version: 3.6.1
   resolution: "@nuxt/schema@npm:3.6.1"
@@ -890,6 +915,23 @@ __metadata:
     unimport: ^3.0.10
     untyped: ^1.3.2
   checksum: 0d5de95704ed0f58b0c2d0d39770b5e1cb71589e2f3f803aa2104a849c2f6e0e9b00150c28155b6da133cd6ffd7e8ba6edf889487da4047b59d173288d5e1a62
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.6.2":
+  version: 3.6.2
+  resolution: "@nuxt/schema@npm:3.6.2"
+  dependencies:
+    defu: ^6.1.2
+    hookable: ^5.5.3
+    pathe: ^1.1.1
+    pkg-types: ^1.0.3
+    postcss-import-resolver: ^2.0.0
+    std-env: ^3.3.3
+    ufo: ^1.1.2
+    unimport: ^3.0.14
+    untyped: ^1.3.2
+  checksum: 931ba8612299e5698235ab48a0d9d1fb74db6fdcfefca12cd87c4bf6c371fc0091530fb78a73885f5c66d2d988a03d847f6ebf772c0b9a058ad8fe63d506d259
   languageName: node
   linkType: hard
 
@@ -1157,7 +1199,7 @@ __metadata:
   resolution: "@storipress/vue-advertising-playground@workspace:playground"
   dependencies:
     "@guanghechen/fast-deep-equal": ^2.2.4
-    "@nuxt/kit": 3.6.1
+    "@nuxt/kit": 3.6.2
     "@unhead/vue": 1.1.30
     "@vueuse/core": ^10.0.0
     happy-dom: 9.20.3
@@ -2379,10 +2421,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:^3.0.1, consola@npm:^3.0.2, consola@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "consola@npm:3.1.0"
-  checksum: b4b16b0ff6a0645fb1b820cf89dd56c8601b9ae0e2c472652bce2f5d99932ed5b38ef7ad2cfa77f4534cd6264d99cf5cf9c3c888e98cc25fbd3c87d31c824975
+"consola@npm:^3.0.1, consola@npm:^3.0.2, consola@npm:^3.1.0, consola@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "consola@npm:3.2.2"
+  checksum: 3c22102f74b4dc1519ab2a3096b1975a8b767f258027cef9888ca9d999ed79388e390b969474bce0b42aade73cd2689f62ca511e530a06bf842092f8ef1bf7a6
   languageName: node
   linkType: hard
 
@@ -3181,16 +3223,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.7":
-  version: 3.2.12
-  resolution: "fast-glob@npm:3.2.12"
+"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.7, fast-glob@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "fast-glob@npm:3.3.0"
   dependencies:
     "@nodelib/fs.stat": ^2.0.2
     "@nodelib/fs.walk": ^1.2.3
     glob-parent: ^5.1.2
     merge2: ^1.3.0
     micromatch: ^4.0.4
-  checksum: 0b1990f6ce831c7e28c4d505edcdaad8e27e88ab9fa65eedadb730438cfc7cde4910d6c975d6b7b8dc8a73da4773702ebcfcd6e3518e73938bb1383badfe01c2
+  checksum: 20df62be28eb5426fe8e40e0d05601a63b1daceb7c3d87534afcad91bdcf1e4b1743cf2d5247d6e225b120b46df0b9053a032b2691ba34ee121e033acd81f547
   languageName: node
   linkType: hard
 
@@ -3506,16 +3548,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^13.1.3, globby@npm:^13.1.4, globby@npm:^13.2.0":
-  version: 13.2.0
-  resolution: "globby@npm:13.2.0"
+"globby@npm:^13.1.3, globby@npm:^13.1.4, globby@npm:^13.2.0, globby@npm:^13.2.1":
+  version: 13.2.2
+  resolution: "globby@npm:13.2.2"
   dependencies:
     dir-glob: ^3.0.1
-    fast-glob: ^3.2.11
-    ignore: ^5.2.0
+    fast-glob: ^3.3.0
+    ignore: ^5.2.4
     merge2: ^1.4.1
     slash: ^4.0.0
-  checksum: 0a3dd786571788adef1c894f22112834cff5bbe061ae6e0a01c5118c39d44b3f1937ef1dae3f8b9bc24756eba84a0923e565b1ad9a4ec52831d7e2a04c035e75
+  checksum: f3d84ced58a901b4fcc29c846983108c426631fe47e94872868b65565495f7bee7b3defd68923bd480582771fd4bbe819217803a164a618ad76f1d22f666f41e
   languageName: node
   linkType: hard
 
@@ -3731,7 +3773,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:^5.2.0, ignore@npm:^5.2.4":
+"ignore@npm:^5.2.4":
   version: 5.2.4
   resolution: "ignore@npm:5.2.4"
   checksum: 3d4c309c6006e2621659311783eaea7ebcd41fe4ca1d78c91c473157ad6666a57a2df790fe0d07a12300d9aac2888204d7be8d59f9aaf665b1c7fcdb432517ef
@@ -4023,12 +4065,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.18.2":
-  version: 1.18.2
-  resolution: "jiti@npm:1.18.2"
+"jiti@npm:^1.18.2, jiti@npm:^1.19.1":
+  version: 1.19.1
+  resolution: "jiti@npm:1.19.1"
   bin:
     jiti: bin/jiti.js
-  checksum: 46c41cd82d01c6efdee3fc0ae9b3e86ed37457192d6366f19157d863d64961b07982ab04e9d5879576a1af99cc4d132b0b73b336094f86a5ce9fb1029ec2d29f
+  checksum: fdf55e315f9e81c04ae902416642062851d92c6cdcc17a59d5d1d35e1a0842e4e79be38da86613c5776fa18c579954542a441b93d1c347a50137dee2e558cbd0
   languageName: node
   linkType: hard
 
@@ -6657,13 +6699,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unimport@npm:^3.0.10, unimport@npm:^3.0.8":
-  version: 3.0.10
-  resolution: "unimport@npm:3.0.10"
+"unimport@npm:^3.0.10, unimport@npm:^3.0.14, unimport@npm:^3.0.8":
+  version: 3.0.14
+  resolution: "unimport@npm:3.0.14"
   dependencies:
     "@rollup/pluginutils": ^5.0.2
     escape-string-regexp: ^5.0.0
-    fast-glob: ^3.2.12
+    fast-glob: ^3.3.0
     local-pkg: ^0.4.3
     magic-string: ^0.30.0
     mlly: ^1.4.0
@@ -6672,7 +6714,7 @@ __metadata:
     scule: ^1.0.0
     strip-literal: ^1.0.1
     unplugin: ^1.3.1
-  checksum: 1e1bc9fbb67a58c2ad7359c5ce019c8ae587e6a5c0db4b7aacfa83a7251322d87be6fa6c4572818c87d22b30eeb41d59e9e61489d50f76330b6815ea9ae84683
+  checksum: da5e6537200fb05e20de0603df88e40c6885222d457d78fa6e4b2361c098b0ccecffb42d53a06242bfbba32c2027ab5e29c1dd088126633ad76951a944bbd43a
   languageName: node
   linkType: hard
 
