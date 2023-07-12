@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/storipress/vue-advertising/compare/v1.1.0...v1.1.1) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vueuse/core to v10 ([89b2d05](https://github.com/storipress/vue-advertising/commit/89b2d059d171d40b15cbb1552a8ec8c2ae8af0e4))
+
 ## [1.1.0](https://github.com/storipress/vue-advertising/compare/v1.0.1...v1.1.0) (2023-03-31)
 
 
