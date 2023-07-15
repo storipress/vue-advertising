@@ -23,7 +23,7 @@
     "@nuxt/kit": "3.6.3",
     "@unhead/vue": "1.1.30",
     "happy-dom": "9.20.3",
-    "nuxt": "3.6.2",
+    "nuxt": "3.6.3",
     "sass": "1.63.6",
     "typescript": "5.1.6",
     "unbuild": "1.2.1",
