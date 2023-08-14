@@ -1164,7 +1164,7 @@ __metadata:
   dependencies:
     "@guanghechen/fast-deep-equal": ^2.2.4
     "@nuxt/kit": 3.6.5
-    "@unhead/vue": 1.3.2
+    "@unhead/vue": 1.3.3
     "@vueuse/core": ^10.0.0
     happy-dom: 9.20.3
     nuxt: 3.6.5
@@ -1186,7 +1186,7 @@ __metadata:
   dependencies:
     "@guanghechen/fast-deep-equal": ^2.2.4
     "@nuxt/kit": ^3.3.2
-    "@unhead/vue": 1.3.2
+    "@unhead/vue": 1.3.3
     "@vueuse/core": ^10.0.0
     happy-dom: 9.20.3
     sass: 1.65.1
@@ -1268,13 +1268,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/dom@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@unhead/dom@npm:1.3.2"
+"@unhead/dom@npm:1.3.3":
+  version: 1.3.3
+  resolution: "@unhead/dom@npm:1.3.3"
   dependencies:
-    "@unhead/schema": 1.3.2
-    "@unhead/shared": 1.3.2
-  checksum: 0731c9b01758ce33b279530ff4606703761c3866ae09afe819d9e6f6876d6e342ef9df34d8d2b906a94713287e0f547743b347c84d7a56f4dce00a686073d65e
+    "@unhead/schema": 1.3.3
+    "@unhead/shared": 1.3.3
+  checksum: 826c4f41a01eee42a8bf42eabdedd626f4274886160a6ced2d64b4cc98f49fe22bfb2ebf545235954a9438e6ba0c7dd0dcfc852dfcbcb8c1283fb7e0da0be86d
   languageName: node
   linkType: hard
 
@@ -1288,13 +1288,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/schema@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@unhead/schema@npm:1.3.2"
+"@unhead/schema@npm:1.3.3":
+  version: 1.3.3
+  resolution: "@unhead/schema@npm:1.3.3"
   dependencies:
     hookable: ^5.5.3
     zhead: ^2.0.10
-  checksum: 1788031b79a7b6156095a7b59476b89197743fdcddfd6149dc81703652bfa802f8c74c191c9c987a2ec36dfe7f04cfce9603b85743cd1ce61a790414b1e201c4
+  checksum: ffe2141e9b363e76570e9b3c63c4ca6ed4a6ca73790c76ce1440380d1d930a16eb500cf3b0a790a722ad28b6c418c3b0aae757cb1cf9add0bce972178cfc4be7
   languageName: node
   linkType: hard
 
@@ -1307,12 +1307,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/shared@npm:1.3.2":
-  version: 1.3.2
-  resolution: "@unhead/shared@npm:1.3.2"
+"@unhead/shared@npm:1.3.3":
+  version: 1.3.3
+  resolution: "@unhead/shared@npm:1.3.3"
   dependencies:
-    "@unhead/schema": 1.3.2
-  checksum: 86925ab2f18cb26c614b6cc00bd055522fb3dff0df3aec4188135529a24f8c5e9d7876cde8d8479913e02d40602c8ec8e0434b988b80841125e90719a2e550e4
+    "@unhead/schema": 1.3.3
+  checksum: 36aeed70fb85cea35dd05fe9c867b58132f61d4fe960a6eb71abf4dac73aa4a7647e3733654e86788b2e4b98a84b18954fcfbfb2e179bd19ca0eb5a68fe04fb6
   languageName: node
   linkType: hard
 
@@ -1326,17 +1326,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/vue@npm:1.3.2, @unhead/vue@npm:^1.1.30":
-  version: 1.3.2
-  resolution: "@unhead/vue@npm:1.3.2"
+"@unhead/vue@npm:1.3.3, @unhead/vue@npm:^1.1.30":
+  version: 1.3.3
+  resolution: "@unhead/vue@npm:1.3.3"
   dependencies:
-    "@unhead/schema": 1.3.2
-    "@unhead/shared": 1.3.2
+    "@unhead/schema": 1.3.3
+    "@unhead/shared": 1.3.3
     hookable: ^5.5.3
-    unhead: 1.3.2
+    unhead: 1.3.3
   peerDependencies:
     vue: ">=2.7 || >=3"
-  checksum: f1cba2db73f8ffc319c079ce0a572282ffce235c64592f9ede9fd71177bb2264a2ae99cb97e84b5657dce32108f10a62bec59beb43c6a93ec0c11b75d1765f52
+  checksum: 0aee53d689c333eec7da8d9928e7064d6c223aa8148a32d37c343c48a7f93c6aae201f07899989f9a38708a2da79f6b599eb83b71867dd4cd2e17d9796090475
   languageName: node
   linkType: hard
 
@@ -6329,15 +6329,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unhead@npm:1.3.2":
-  version: 1.3.2
-  resolution: "unhead@npm:1.3.2"
+"unhead@npm:1.3.3":
+  version: 1.3.3
+  resolution: "unhead@npm:1.3.3"
   dependencies:
-    "@unhead/dom": 1.3.2
-    "@unhead/schema": 1.3.2
-    "@unhead/shared": 1.3.2
+    "@unhead/dom": 1.3.3
+    "@unhead/schema": 1.3.3
+    "@unhead/shared": 1.3.3
     hookable: ^5.5.3
-  checksum: fc8338c92809f37095644fb2295cd4dde6d937b3849ddac20894955989238eedd35cde206d49db6eba244f215bebd7cfcb340a14dfd02f8d680a258d41d353c6
+  checksum: e6fb70f58d3a2cb2c625ac25b7ab70298803c42e8c02772f03bcd3ab4265ab53b40983fe0bfd0b4c4fe7a09a7ba1b5b8ae7970ce20ab64e2da697d24de9afb98
   languageName: node
   linkType: hard
 
