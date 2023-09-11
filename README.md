@@ -3,6 +3,11 @@
 <div align="center"><strong>Vue Advertising</strong></div>
 <div align="center">A JavaScript library for display ads in <a href="https://vuejs.org" target="_blank" rel="noopener noreferer">Vue</a> applications.</div>
 <br />
+<p align="center">
+    <a href="https://codeclimate.com/github/storipress/vue-advertising/maintainability"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/maintainability" /></a>
+    <a href="https://codeclimate.com/github/storipress/vue-advertising/test_coverage"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/test_coverage" /></a>
+ </p>
+<br />
 <div align="center">
 <a href="https://storipress.com">Website</a> 
 <span> · </span>
@@ -10,11 +15,6 @@
 <span> · </span>
 <a href="https://join.slack.com/t/storipresscommunity/shared_invite/zt-1krx5nm1d-h_WKy1XF3MSxuY4BQ0VRbQ">Slack</a>
 </div>
-
-<p align="center">
-    <a href="https://codeclimate.com/github/storipress/vue-advertising/maintainability"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/maintainability" /></a>
-    <a href="https://codeclimate.com/github/storipress/vue-advertising/test_coverage"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/test_coverage" /></a>
- </p>
 
 ## Introduction
 
