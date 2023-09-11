@@ -11,6 +11,11 @@
 <a href="https://join.slack.com/t/storipresscommunity/shared_invite/zt-1krx5nm1d-h_WKy1XF3MSxuY4BQ0VRbQ">Slack</a>
 </div>
 
+<p align="center">
+    <a href="https://codeclimate.com/github/storipress/vue-advertising/maintainability"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/maintainability" /></a>
+    <a href="https://codeclimate.com/github/storipress/vue-advertising/test_coverage"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/test_coverage" /></a>
+ </p>
+
 ## Introduction
 
 Integrate ads in your app the “Vue way". A set of helpers for integrating complex advertising setups in Vue projects. It reduces the pain of integrating advertising in server side rendered projects. It also takes care of bloat by centralising configuration.
