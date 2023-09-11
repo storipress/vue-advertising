@@ -7,7 +7,6 @@
     <a href="https://codeclimate.com/github/storipress/vue-advertising/maintainability"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/maintainability" /></a>
     <a href="https://codeclimate.com/github/storipress/vue-advertising/test_coverage"><img src="https://api.codeclimate.com/v1/badges/d7ef7c3fb7557d362e9a/test_coverage" /></a>
  </p>
-<br />
 <div align="center">
 <a href="https://storipress.com">Website</a> 
 <span> · </span>
