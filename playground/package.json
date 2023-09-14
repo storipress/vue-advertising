@@ -24,7 +24,7 @@
     "@unhead/vue": "1.7.2",
     "happy-dom": "9.20.3",
     "nuxt": "3.7.3",
-    "sass": "1.66.1",
+    "sass": "1.67.0",
     "typescript": "5.2.2",
     "unbuild": "1.2.1",
     "vite": "4.4.9",
