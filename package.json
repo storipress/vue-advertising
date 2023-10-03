@@ -44,7 +44,7 @@
   "peerDependencies": {
     "vue": "^3.0.0"
   },
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@3.6.4",
   "devDependencies": {
     "@unhead/vue": "1.7.4",
     "happy-dom": "9.20.3",
