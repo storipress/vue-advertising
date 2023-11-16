@@ -12,5 +12,5 @@ test.each`
   ${{ marginPercent: 0 }}   | ${true}
   ${{ marginPercent: -1 }}  | ${false}
 `('returns $expected when called with lazy load config $lazyLoadConfig', ({ lazyLoadConfig, expected }) =>
-  expect(isLazyLoading(lazyLoadConfig)).toBe(expected)
+  expect(isLazyLoading(lazyLoadConfig)).toBe(expected),
 )

@@ -23,7 +23,7 @@ const props = withDefaults(
         top: 0,
       }
     },
-  }
+  },
 )
 
 const nowSticky = ref(true)
