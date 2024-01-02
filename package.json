@@ -48,7 +48,7 @@
   "devDependencies": {
     "@unhead/vue": "1.8.9",
     "happy-dom": "9.20.3",
-    "sass": "1.69.6",
+    "sass": "1.69.7",
     "typescript": "5.3.3",
     "unbuild": "1.2.1",
     "vite": "4.5.1",
