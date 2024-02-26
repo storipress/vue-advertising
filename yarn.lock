@@ -2052,7 +2052,7 @@ __metadata:
     "@nuxt/kit": 3.10.2
     "@unhead/vue": 1.8.10
     "@vueuse/core": ^10.0.0
-    happy-dom: 9.20.3
+    happy-dom: 13.6.2
     nuxt: 3.10.2
     sass: 1.71.0
     typescript: 5.3.3
@@ -2074,7 +2074,7 @@ __metadata:
     "@nuxt/kit": ^3.3.2
     "@unhead/vue": 1.8.10
     "@vueuse/core": ^10.0.0
-    happy-dom: 9.20.3
+    happy-dom: 13.6.2
     sass: 1.71.0
     typescript: 5.3.3
     unbuild: 1.2.1
@@ -3390,13 +3390,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css.escape@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "css.escape@npm:1.5.1"
-  checksum: f6d38088d870a961794a2580b2b2af1027731bb43261cfdce14f19238a88664b351cc8978abc20f06cc6bbde725699dec8deb6fe9816b139fc3f2af28719e774
-  languageName: node
-  linkType: hard
-
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -4621,17 +4614,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:9.20.3":
-  version: 9.20.3
-  resolution: "happy-dom@npm:9.20.3"
+"happy-dom@npm:13.6.2":
+  version: 13.6.2
+  resolution: "happy-dom@npm:13.6.2"
   dependencies:
-    css.escape: ^1.5.1
     entities: ^4.5.0
-    iconv-lite: ^0.6.3
     webidl-conversions: ^7.0.0
-    whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 7c737a0005aaf72e1f7138e5fe651759618d45c67597ab9865434da4a980a2854b4179ee678a84a5613c1bf4da88e64437670048cc2466c946265110c8a49f55
+  checksum: e2bae0731bea55515efc4408fac063bb71b3a1a01d4528f80fd99e7873f55617d9e87146b8693cb5da16c3511aae78c7b78f8417a192107a907a916efe3d3e06
   languageName: node
   linkType: hard
 
@@ -4800,7 +4790,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2, iconv-lite@npm:^0.6.3":
+"iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
   dependencies:
@@ -8769,15 +8759,6 @@ __metadata:
   version: 0.6.1
   resolution: "webpack-virtual-modules@npm:0.6.1"
   checksum: 0cd993d7b00af0ed89eee96ed6dcb2307fa8dc38e37f34e78690088314976aa79a31cf146553c5e414cdc87222878c5e4979abeb0b00bf6dc9c6f018604a1310
-  languageName: node
-  linkType: hard
-
-"whatwg-encoding@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "whatwg-encoding@npm:2.0.0"
-  dependencies:
-    iconv-lite: 0.6.3
-  checksum: 7087810c410aa9b689cbd6af8773341a53cdc1f3aae2a882c163bd5522ec8ca4cdfc269aef417a5792f411807d5d77d50df4c24e3abb00bb60192858a40cc675
   languageName: node
   linkType: hard
 
