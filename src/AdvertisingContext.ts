@@ -15,7 +15,7 @@ const [useProvideAdvertisingContext, useAdvertisingContext] = createInjectionSta
       activate,
       config,
     }
-  }
+  },
 )
 
 export function useAdvertisingContextWithDefault() {
