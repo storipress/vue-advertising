@@ -11,7 +11,7 @@
     "!dist/**/__snapshots__/**"
   ],
   "dependencies": {
-    "@guanghechen/fast-deep-equal": "^2.2.4",
+    "@guanghechen/fast-deep-equal": "^2.3.7",
     "@vueuse/core": "^10.0.0",
     "vue3-lazy-hydration": "^1.2.1"
   },
@@ -26,9 +26,9 @@
     "nuxt": "3.10.2",
     "sass": "1.71.1",
     "typescript": "5.3.3",
-    "unbuild": "1.2.1",
-    "vite": "4.5.2",
-    "vitest": "0.34.6",
-    "vue": "3.4.19"
+    "unbuild": "2.0.0",
+    "vite": "5.1.4",
+    "vitest": "1.3.1",
+    "vue": "3.4.21"
   }
 }
