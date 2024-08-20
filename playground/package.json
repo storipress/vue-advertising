@@ -22,7 +22,7 @@
   "devDependencies": {
     "@nuxt/kit": "3.12.4",
     "@unhead/vue": "1.10.0",
-    "happy-dom": "13.10.1",
+    "happy-dom": "14.12.3",
     "nuxt": "3.12.4",
     "sass": "1.77.8",
     "typescript": "5.5.4",
