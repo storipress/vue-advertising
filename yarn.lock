@@ -2303,7 +2303,7 @@ __metadata:
     "@vueuse/core": "npm:^10.0.0"
     happy-dom: "npm:13.10.1"
     nuxt: "npm:3.13.2"
-    sass: "npm:1.79.4"
+    sass: "npm:1.79.5"
     typescript: "npm:5.6.3"
     unbuild: "npm:2.0.0"
     vite: "npm:5.4.8"
@@ -2324,7 +2324,7 @@ __metadata:
     "@unhead/vue": "npm:1.11.7"
     "@vueuse/core": "npm:^10.0.0"
     happy-dom: "npm:13.10.1"
-    sass: "npm:1.79.4"
+    sass: "npm:1.79.5"
     typescript: "npm:5.6.3"
     unbuild: "npm:2.0.0"
     vite: "npm:5.4.8"
@@ -7879,16 +7879,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.79.4":
-  version: 1.79.4
-  resolution: "sass@npm:1.79.4"
+"sass@npm:1.79.5":
+  version: 1.79.5
+  resolution: "sass@npm:1.79.5"
   dependencies:
+    "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 10/82e2ee5c2e46c96818454c7d97bcfb5b36c1c27de3b1e705adad7a49a8b32226c5254cc4c8804f45db2b6aa018848973177274c2b1137d4caf7abb5cb7bbf8b9
+  checksum: 10/86f6ebe9c3c8d86cf8fff2e12f93109697140090604fb6180c8792c0e4fc98377c433dbd4c86a0272c47ba4c307edf24435a06d7e5995956048a23f9e187fedc
   languageName: node
   linkType: hard
 
