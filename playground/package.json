@@ -20,10 +20,10 @@
   },
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
-    "@nuxt/kit": "3.14.1592",
+    "@nuxt/kit": "3.15.0",
     "@unhead/vue": "1.11.14",
     "happy-dom": "13.10.1",
-    "nuxt": "3.14.1592",
+    "nuxt": "3.15.0",
     "sass": "1.83.0",
     "typescript": "5.7.2",
     "unbuild": "2.0.0",
