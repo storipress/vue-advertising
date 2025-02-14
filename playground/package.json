@@ -21,7 +21,7 @@
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
     "@nuxt/kit": "3.15.4",
-    "@unhead/vue": "1.11.18",
+    "@unhead/vue": "1.11.19",
     "happy-dom": "13.10.1",
     "nuxt": "3.15.4",
     "sass": "1.85.0",
