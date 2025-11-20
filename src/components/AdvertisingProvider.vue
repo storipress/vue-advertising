@@ -22,7 +22,7 @@ const props = withDefaults(
   {
     active: true,
     isPrebid: false,
-  }
+  },
 )
 
 const { config, plugins, isPrebid, onError } = props
@@ -87,7 +87,7 @@ watch(
         nowConfig.value = advertising.value.config
       }
     }
-  }
+  },
 )
 
 watchEffect(async () => {

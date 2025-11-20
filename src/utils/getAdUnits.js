@@ -6,7 +6,7 @@ export default (slots) =>
           code: currSlot.id,
           mediaTypes: currPrebid.mediaTypes,
           bids: currPrebid.bids,
-        }))
+        })),
       ),
-    []
+    [],
   )

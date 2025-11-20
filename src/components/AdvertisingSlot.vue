@@ -26,7 +26,7 @@ const props = withDefaults(
         top: 0,
       }
     },
-  }
+  },
 )
 const observerRef = ref<HTMLElement | null>(null)
 const { activate, config } = useAdvertisingContextWithDefault()
@@ -58,12 +58,12 @@ watchEffect(
       },
       {
         rootMargin,
-      }
+      },
     )
 
     onCleanup(stop)
   },
-  { flush: 'post' }
+  { flush: 'post' },
 )
 
 watchEffect(
@@ -74,7 +74,7 @@ watchEffect(
     const { id, customEventHandlers } = props
     activate.value(id, customEventHandlers)
   },
-  { flush: 'post' }
+  { flush: 'post' },
 )
 </script>
 

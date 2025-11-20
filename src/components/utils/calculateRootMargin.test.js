@@ -21,5 +21,5 @@ test.each`
   ({ marginPercent, isMobileDeviceValue, mobileScaling, expected }) => {
     isMobileDevice.mockReturnValue(isMobileDeviceValue)
     expect(calculateRootMargin({ marginPercent, mobileScaling })).toBe(expected)
-  }
+  },
 )
