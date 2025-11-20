@@ -75,7 +75,7 @@ export default class Advertising {
               this.refreshSlots(selectedSlots)
             },
           }),
-        this.onError
+        this.onError,
       )
     }
 
@@ -91,7 +91,7 @@ export default class Advertising {
               this.requestManager.aps = true // signals that APS request has completed
               this.refreshSlots(selectedSlots) // checks whether both APS and Prebid have returned
             }, this.onError)
-          }
+          },
         )
       } catch (error) {
         this.onError(error)
@@ -139,7 +139,7 @@ export default class Advertising {
               this.refreshSlots([slots[id].gpt])
             },
           }),
-        this.onError
+        this.onError,
       )
     }
 
@@ -155,7 +155,7 @@ export default class Advertising {
               this.requestManager.aps = true // signals that APS request has completed
               this.refreshSlots([slots[id].gpt]) // checks whether both APS and Prebid have returned
             }, this.onError)
-          }
+          },
         )
       } catch (error) {
         this.onError(error)
@@ -183,7 +183,7 @@ export default class Advertising {
       return
     }
     Object.keys(this.config.customEvents).forEach((customEventId) =>
-      this.setupCustomEvent(customEventId, this.config.customEvents[customEventId])
+      this.setupCustomEvent(customEventId, this.config.customEvents[customEventId]),
     )
   }
 
@@ -211,7 +211,7 @@ export default class Advertising {
       return
     }
     Object.keys(this.config.customEvents).forEach((customEventId) =>
-      window.removeEventListener('message', this.customEventHandlers[customEventId])
+      window.removeEventListener('message', this.customEventHandlers[customEventId]),
     )
   }
 
@@ -265,7 +265,7 @@ export default class Advertising {
         sizes: sizes.filter(
           // APS requires sizes to have type number[][]. Each entry in sizes
           // should be an array containing height and width.
-          (size) => typeof size === 'object' && typeof size[0] === 'number' && typeof size[1] === 'number'
+          (size) => typeof size === 'object' && typeof size[0] === 'number' && typeof size[1] === 'number',
         ),
       }
 
@@ -288,7 +288,7 @@ export default class Advertising {
       const { path, targeting } = this.config.interstitialSlot
       const slot = window.googletag.defineOutOfPageSlot(
         path || this.config.path,
-        window.googletag.enums.OutOfPageFormat.INTERSTITIAL
+        window.googletag.enums.OutOfPageFormat.INTERSTITIAL,
       )
       if (slot) {
         const entries = Object.entries(targeting || [])
@@ -333,9 +333,9 @@ export default class Advertising {
             code: currSlot.id,
             mediaTypes: currPrebid.mediaTypes,
             bids: currPrebid.bids,
-          }))
+          })),
         ),
-      []
+      [],
     )
   }
 
@@ -396,7 +396,7 @@ export default class Advertising {
     }
     if (this.config.slots) {
       this.config.slots = this.config.slots.map((slot) =>
-        slot.enableLazyLoad === true ? { ...slot, enableLazyLoad: this.defaultLazyLoadConfig } : slot
+        slot.enableLazyLoad === true ? { ...slot, enableLazyLoad: this.defaultLazyLoadConfig } : slot,
       )
     }
   }
@@ -443,7 +443,7 @@ export default class Advertising {
         } catch (error) {
           onError(error)
         }
-      })
+      }),
     )
   }
 }

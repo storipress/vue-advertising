@@ -21,7 +21,7 @@ const props = withDefaults(
   {
     active: true,
     isPrebid: false,
-  }
+  },
 )
 
 const { config, plugins, isPrebid, onError } = props
@@ -46,7 +46,7 @@ useHead({
     },
     {
       children: `var new_global_advertising = new global_advertising(${JSON.stringify(
-        toRaw(config)
+        toRaw(config),
       )}, ${plugins}, ${onError})`,
     },
     {
@@ -77,7 +77,7 @@ watch(
         await setup_advertising()
       }
     }
-  }
+  },
 )
 </script>
 

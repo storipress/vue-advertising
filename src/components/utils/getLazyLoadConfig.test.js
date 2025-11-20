@@ -17,5 +17,5 @@ test.each`
   ${"the specified slot's lazy loading config is set to false"}                                        | ${'false'}                       | ${{ slots: [{ id: DIV_ID_FOO, enableLazyLoad: false }] }}                                                                 | ${DIV_ID_FOO} | ${false}
   ${"the specified slot's lazy loading config is set to false and there is a global lazy load config"} | ${'false'}                       | ${{ enableLazyLoad: 'my-global-lazy-load-config', slots: [{ id: DIV_ID_FOO, enableLazyLoad: false }] }}                   | ${DIV_ID_FOO} | ${false}
 `('returns $expectedDesc when $inputDesc', ({ input, id, expected }) =>
-  expect(getLazyLoadConfig(input, id)).toBe(expected)
+  expect(getLazyLoadConfig(input, id)).toBe(expected),
 )
