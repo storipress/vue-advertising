@@ -38,7 +38,7 @@
   "dependencies": {
     "@guanghechen/fast-deep-equal": "^2.3.7",
     "@nuxt/kit": "^3.3.2",
-    "@vueuse/core": "^10.0.0",
+    "@vueuse/core": "^14.0.0",
     "vue3-lazy-hydration": "^1.2.1"
   },
   "peerDependencies": {
