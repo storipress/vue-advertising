@@ -2253,7 +2253,7 @@ __metadata:
     "@nuxt/kit": "npm:3.20.1"
     "@unhead/vue": "npm:1.11.20"
     "@vueuse/core": "npm:^10.0.0"
-    happy-dom: "npm:13.10.1"
+    happy-dom: "npm:20.0.0"
     nuxt: "npm:3.20.1"
     sass: "npm:1.94.2"
     typescript: "npm:5.9.3"
@@ -2275,7 +2275,7 @@ __metadata:
     "@nuxt/kit": "npm:^3.3.2"
     "@unhead/vue": "npm:1.11.20"
     "@vueuse/core": "npm:^10.0.0"
-    happy-dom: "npm:13.10.1"
+    happy-dom: "npm:20.0.0"
     sass: "npm:1.94.2"
     typescript: "npm:5.9.3"
     unbuild: "npm:2.0.0"
@@ -2318,6 +2318,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^20.0.0":
+  version: 20.19.25
+  resolution: "@types/node@npm:20.19.25"
+  dependencies:
+    undici-types: "npm:~6.21.0"
+  checksum: 10/f0ed863599da289df5838380e211f9e010414dc7df8127b79f6a7eeca80a8d6e3daf3e58ddad1884f8dfafd17c16b02f56cee1689b7ebdf5df6d0e5770165ac1
+  languageName: node
+  linkType: hard
+
 "@types/parse-path@npm:^7.0.0":
   version: 7.0.3
   resolution: "@types/parse-path@npm:7.0.3"
@@ -2336,6 +2345,13 @@ __metadata:
   version: 0.0.20
   resolution: "@types/web-bluetooth@npm:0.0.20"
   checksum: 10/2faa323e5c994e9468fff4675e3b6d35f3730eb4dc7c761d02267fb6246dbfd659fd8f3583db0872aae05b3ee139799c25655bbe79bf1b56c08c06e665db814b
+  languageName: node
+  linkType: hard
+
+"@types/whatwg-mimetype@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@types/whatwg-mimetype@npm:3.0.2"
+  checksum: 10/609607beeaa8b50b9e00541d8f571880d651b26b6b006103370099aba00784037de54433627c9fe775a5558e3d1fc09c2a48f54c8af91988e9bebeaf6a698eeb
   languageName: node
   linkType: hard
 
@@ -4778,14 +4794,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:13.10.1":
-  version: 13.10.1
-  resolution: "happy-dom@npm:13.10.1"
+"happy-dom@npm:20.0.0":
+  version: 20.0.0
+  resolution: "happy-dom@npm:20.0.0"
   dependencies:
-    entities: "npm:^4.5.0"
-    webidl-conversions: "npm:^7.0.0"
+    "@types/node": "npm:^20.0.0"
+    "@types/whatwg-mimetype": "npm:^3.0.2"
     whatwg-mimetype: "npm:^3.0.0"
-  checksum: 10/cb94fae0f93abbef85c98b883381ccde9a59fe158341fdea5b0fb6e04aee19026f9717cd019dab59197564292670de0f38be9678f9532559535ff71c13e2e03e
+  checksum: 10/0fa626e2051dfa5f1ea0da9e3776b5986d3700c261a8ba7c496e7ad89f4df0318920b7c286d3b310481712b378ffb7dee35ed782ff039e4166f4ba957a76b6df
   languageName: node
   linkType: hard
 
@@ -8587,6 +8603,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 10/ec8f41aa4359d50f9b59fa61fe3efce3477cc681908c8f84354d8567bb3701fafdddf36ef6bff307024d3feb42c837cf6f670314ba37fc8145e219560e473d14
+  languageName: node
+  linkType: hard
+
 "unenv@npm:^2.0.0-rc.23, unenv@npm:^2.0.0-rc.24":
   version: 2.0.0-rc.24
   resolution: "unenv@npm:2.0.0-rc.24"
@@ -9264,13 +9287,6 @@ __metadata:
   version: 3.0.1
   resolution: "webidl-conversions@npm:3.0.1"
   checksum: 10/b65b9f8d6854572a84a5c69615152b63371395f0c5dcd6729c45789052296df54314db2bc3e977df41705eacb8bc79c247cee139a63fa695192f95816ed528ad
-  languageName: node
-  linkType: hard
-
-"webidl-conversions@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "webidl-conversions@npm:7.0.0"
-  checksum: 10/4c4f65472c010eddbe648c11b977d048dd96956a625f7f8b9d64e1b30c3c1f23ea1acfd654648426ce5c743c2108a5a757c0592f02902cf7367adb7d14e67721
   languageName: node
   linkType: hard
 
