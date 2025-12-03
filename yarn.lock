@@ -2251,7 +2251,7 @@ __metadata:
   dependencies:
     "@guanghechen/fast-deep-equal": "npm:^2.3.7"
     "@nuxt/kit": "npm:3.20.1"
-    "@unhead/vue": "npm:1.11.20"
+    "@unhead/vue": "npm:2.0.19"
     "@vueuse/core": "npm:^10.0.0"
     happy-dom: "npm:13.10.1"
     nuxt: "npm:3.20.1"
@@ -2273,7 +2273,7 @@ __metadata:
   dependencies:
     "@guanghechen/fast-deep-equal": "npm:^2.3.7"
     "@nuxt/kit": "npm:^3.3.2"
-    "@unhead/vue": "npm:1.11.20"
+    "@unhead/vue": "npm:2.0.19"
     "@vueuse/core": "npm:^10.0.0"
     happy-dom: "npm:13.10.1"
     sass: "npm:1.94.2"
@@ -2339,51 +2339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/dom@npm:1.11.20":
-  version: 1.11.20
-  resolution: "@unhead/dom@npm:1.11.20"
-  dependencies:
-    "@unhead/schema": "npm:1.11.20"
-    "@unhead/shared": "npm:1.11.20"
-  checksum: 10/947f3b6ec4373fcffba427dbcf119600e98e6a2e43835ac73b9d5c9c2f0ccd956e86f1b55e11d85f6649b69cf315982e46156b3812f073e4cd4fcc8f68a5e486
-  languageName: node
-  linkType: hard
-
-"@unhead/schema@npm:1.11.20":
-  version: 1.11.20
-  resolution: "@unhead/schema@npm:1.11.20"
-  dependencies:
-    hookable: "npm:^5.5.3"
-    zhead: "npm:^2.2.4"
-  checksum: 10/150b35c25368c476a2fce030d7b17ff52a3694c7863c288e1ad17ddf1aa0a97314c0732a381b477f9805772d3edb7b492238cd3f1201514b760f521447b239e1
-  languageName: node
-  linkType: hard
-
-"@unhead/shared@npm:1.11.20":
-  version: 1.11.20
-  resolution: "@unhead/shared@npm:1.11.20"
-  dependencies:
-    "@unhead/schema": "npm:1.11.20"
-    packrup: "npm:^0.1.2"
-  checksum: 10/45b4afa76b96a9e2abc1dc70bcccae150423b75472a8501906ebd8a5e120b8a65f2acb0ae6ce065b1b1f018e29fc008562fc0e103ef9eaaac9f4925e3a72b86d
-  languageName: node
-  linkType: hard
-
-"@unhead/vue@npm:1.11.20":
-  version: 1.11.20
-  resolution: "@unhead/vue@npm:1.11.20"
-  dependencies:
-    "@unhead/schema": "npm:1.11.20"
-    "@unhead/shared": "npm:1.11.20"
-    hookable: "npm:^5.5.3"
-    unhead: "npm:1.11.20"
-  peerDependencies:
-    vue: ">=2.7 || >=3"
-  checksum: 10/90222e2846ed53625b2a50c64dddf124ed34a7c5d4d8961d96c7a5e6074970a77b55b30ba9db4cc7e8561d8619bac059e23762207d004dcd9c9a8409c7765ec0
-  languageName: node
-  linkType: hard
-
-"@unhead/vue@npm:^2.0.19":
+"@unhead/vue@npm:2.0.19, @unhead/vue@npm:^2.0.19":
   version: 2.0.19
   resolution: "@unhead/vue@npm:2.0.19"
   dependencies:
@@ -6513,13 +6469,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"packrup@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "packrup@npm:0.1.2"
-  checksum: 10/3ba224b0373c25202c2b4ea167dd726b390567256b1af8be8bd73f4f9ed7971bf93f11d7bfce92c93526cde1aad531a0b1f82d4587cde1eb083b9351f038622d
-  languageName: node
-  linkType: hard
-
 "parse-path@npm:^7.0.0":
   version: 7.0.0
   resolution: "parse-path@npm:7.0.0"
@@ -8596,18 +8545,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unhead@npm:1.11.20":
-  version: 1.11.20
-  resolution: "unhead@npm:1.11.20"
-  dependencies:
-    "@unhead/dom": "npm:1.11.20"
-    "@unhead/schema": "npm:1.11.20"
-    "@unhead/shared": "npm:1.11.20"
-    hookable: "npm:^5.5.3"
-  checksum: 10/1b18f84839c4ea0a65c51cfbac211fa5e67e9987ab204b920e5e72eb797e70c8947d3d8ce488fee0532fba7ba482a9a5e32401068660ba24fa36fe90698a38a6
-  languageName: node
-  linkType: hard
-
 "unhead@npm:2.0.19":
   version: 2.0.19
   resolution: "unhead@npm:2.0.19"
@@ -9480,13 +9417,6 @@ __metadata:
     cookie-es: "npm:^2.0.0"
     youch-core: "npm:^0.3.3"
   checksum: 10/4bc9fdf6fea9ae53324d9dc093042c7c3d3d135a4e2a677df06077a19872d0238bb67476d104c80c0b768c756714f5000c2686249c35f1e8681f2509e3aa1148
-  languageName: node
-  linkType: hard
-
-"zhead@npm:^2.2.4":
-  version: 2.2.4
-  resolution: "zhead@npm:2.2.4"
-  checksum: 10/cfa2ba81bf936fd4f5ba19360412c7017a164250823f22e575e1956b20c73d76b989985c02a4f89e2e02f3fb203fbe8857072cf5fbece59a374d1a6bf588555b
   languageName: node
   linkType: hard
 
