@@ -46,7 +46,7 @@
   },
   "packageManager": "yarn@4.1.0",
   "devDependencies": {
-    "@unhead/vue": "1.11.20",
+    "@unhead/vue": "2.0.19",
     "happy-dom": "13.10.1",
     "sass": "1.94.2",
     "typescript": "5.9.3",
