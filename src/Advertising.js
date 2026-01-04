@@ -1,5 +1,11 @@
 export default class Advertising {
-  constructor(config, plugins = [], onError = () => {}) {
+  constructor(
+    config,
+    plugins = [],
+    onError = () => {
+      // intentionally empty. <default function>
+    }
+  ) {
     this.config = config
     this.slots = {}
     this.outOfPageSlots = {}
@@ -13,6 +19,16 @@ export default class Advertising {
     this.defaultLazyLoadConfig = {
       marginPercent: 0,
       mobileScaling: 1,
+    }
+    this.EXECUTE_PLUGINS_ACTION = {
+      SETUP: 'setup',
+      DISPLAYSLOTS: 'displaySlots',
+      DISPLAYOUTOFPAGESLOT: 'displayOutOfPageSlot',
+      REFRESHINTERSTITIALSLOT: 'refreshInterstitialSlot',
+      SETUPPREBID: 'setupPrebid',
+      TEARDOWNPREBID: 'teardownPrebid',
+      SETUPGPT: 'setupGpt',
+      TEARDOWNGPT: 'teardownGpt',
     }
 
     this.requestManager = {
@@ -28,19 +44,12 @@ export default class Advertising {
       typeof this.config.usePrebid === 'undefined' ? typeof window.pbjs !== 'undefined' : this.config.usePrebid
     this.isAPSUsed =
       typeof this.config.useAPS === 'undefined' ? typeof window.apstag !== 'undefined' : this.config.useAPS
-    this.executePlugins('setup')
-    const { slots, outOfPageSlots, queue, isPrebidUsed, isAPSUsed } = this
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUP)
+    const { queue, isPrebidUsed, isAPSUsed } = this
     this.setupCustomEvents()
     const setUpQueueItems = [Advertising.queueForGPT(this.setupGpt.bind(this), this.onError)]
     if (isAPSUsed) {
-      try {
-        window.apstag.init({
-          ...this.config.aps,
-          adServer: 'googletag',
-        })
-      } catch (error) {
-        this.onError(error)
-      }
+      this.initApstag()
     }
     if (isPrebidUsed) {
       setUpQueueItems.push(Advertising.queueForPrebid(this.setupPrebid.bind(this), this.onError))
@@ -50,52 +59,15 @@ export default class Advertising {
     if (queue.length === 0) {
       return
     }
-    for (let i = 0; i < queue.length; i++) {
-      const { id, customEventHandlers } = queue[i]
-      Object.keys(customEventHandlers).forEach((customEventId) => {
-        if (!this.customEventCallbacks[customEventId]) {
-          this.customEventCallbacks[customEventId] = {}
-        }
-        return (this.customEventCallbacks[customEventId][id] = customEventHandlers[customEventId])
-      })
-    }
-    const divIds = queue.filter(({ id }) => id)
-    const selectedSlots = queue.map(({ id }) => {
-      return slots[id].gpt || outOfPageSlots[id]
-    })
+    this.setCustomEventCallbackByQueue(queue)
+    const { divIds, selectedSlots } = this.getDivIdsAndSlots()
 
     if (isPrebidUsed) {
-      Advertising.queueForPrebid(
-        () =>
-          window.pbjs.requestBids({
-            adUnitCodes: divIds,
-            bidsBackHandler: () => {
-              window.pbjs.setTargetingForGPTAsync(divIds)
-              this.requestManager.prebid = true
-              this.refreshSlots(selectedSlots)
-            },
-          }),
-        this.onError
-      )
+      Advertising.queueForPrebid(this.getPrebidFetchBidsCallback(divIds, selectedSlots), this.onError)
     }
 
     if (this.isAPSUsed) {
-      try {
-        window.apstag.fetchBids(
-          {
-            slots: selectedSlots.map((slot) => slot.aps),
-          },
-          () => {
-            Advertising.queueForGPT(() => {
-              window.apstag.setDisplayBids()
-              this.requestManager.aps = true // signals that APS request has completed
-              this.refreshSlots(selectedSlots) // checks whether both APS and Prebid have returned
-            }, this.onError)
-          }
-        )
-      } catch (error) {
-        this.onError(error)
-      }
+      this.apstagFetchBids(selectedSlots, selectedSlots)
     }
 
     if (!isPrebidUsed && !isAPSUsed) {
@@ -122,44 +94,14 @@ export default class Advertising {
       this.queue.push({ id, customEventHandlers })
       return
     }
-    Object.keys(customEventHandlers).forEach((customEventId) => {
-      if (!this.customEventCallbacks[customEventId]) {
-        this.customEventCallbacks[customEventId] = {}
-      }
-      return (this.customEventCallbacks[customEventId][id] = customEventHandlers[customEventId])
-    })
+    this.setCustomEventCallback(id, customEventHandlers)
+
     if (isPrebidUsed) {
-      Advertising.queueForPrebid(
-        () =>
-          window.pbjs.requestBids({
-            adUnitCodes: [id],
-            bidsBackHandler: () => {
-              window.pbjs.setTargetingForGPTAsync([id])
-              this.requestManager.prebid = true
-              this.refreshSlots([slots[id].gpt])
-            },
-          }),
-        this.onError
-      )
+      Advertising.queueForPrebid(this.getPrebidFetchBidsCallback([id], [slots[id].gpt]), this.onError)
     }
 
     if (this.isAPSUsed) {
-      try {
-        window.apstag.fetchBids(
-          {
-            slots: [slots[id].aps],
-          },
-          () => {
-            Advertising.queueForGPT(() => {
-              window.apstag.setDisplayBids()
-              this.requestManager.aps = true // signals that APS request has completed
-              this.refreshSlots([slots[id].gpt]) // checks whether both APS and Prebid have returned
-            }, this.onError)
-          }
-        )
-      } catch (error) {
-        this.onError(error)
-      }
+      this.apstagFetchBids([slots[id]], [slots[id].gpt])
     }
 
     if (!this.isPrebidUsed && !this.isAPSUsed) {
@@ -177,6 +119,77 @@ export default class Advertising {
   }
 
   // ---------- PRIVATE METHODS ----------
+  apstagFetchBids(selectedSlots, checkedSlots) {
+    try {
+      window.apstag.fetchBids(
+        {
+          slots: selectedSlots.map((slot) => slot.aps),
+        },
+        () => {
+          Advertising.queueForGPT(() => {
+            window.apstag.setDisplayBids()
+            this.requestManager.aps = true // signals that APS request has completed
+            this.refreshSlots(checkedSlots) // checks whether both APS and Prebid have returned
+          }, this.onError)
+        }
+      )
+    } catch (error) {
+      this.onError(error)
+    }
+  }
+
+  getPrebidFetchBidsCallback(divIds, selectedSlots) {
+    return () =>
+      window.pbjs.requestBids({
+        adUnitCodes: divIds,
+        bidsBackHandler: () => {
+          window.pbjs.setTargetingForGPTAsync(divIds)
+          this.requestManager.prebid = true
+          this.refreshSlots(selectedSlots)
+        },
+      })
+  }
+
+  getDivIdsAndSlots() {
+    const { queue, outOfPageSlots, slots } = this
+    const divIds = []
+    const selectedSlots = []
+    queue.forEach((item) => {
+      const { id } = item
+      if (id) {
+        divIds.push(item)
+      }
+      selectedSlots.push(slots[id]?.gpt || outOfPageSlots[id])
+    })
+    return { divIds, selectedSlots }
+  }
+
+  setCustomEventCallbackByQueue(queue) {
+    for (let i = 0; i < queue.length; i++) {
+      const { id, customEventHandlers } = queue[i]
+      this.setCustomEventCallback(id, customEventHandlers)
+    }
+  }
+
+  setCustomEventCallback(id, customEventHandlers) {
+    Object.keys(customEventHandlers).forEach((customEventId) => {
+      if (!this.customEventCallbacks[customEventId]) {
+        this.customEventCallbacks[customEventId] = {}
+      }
+      this.customEventCallbacks[customEventId][id] = customEventHandlers[customEventId]
+    })
+  }
+
+  initApstag() {
+    try {
+      window.apstag.init({
+        ...this.config.aps,
+        adServer: 'googletag',
+      })
+    } catch (error) {
+      this.onError(error)
+    }
+  }
 
   setupCustomEvents() {
     if (!this.config.customEvents) {
@@ -303,14 +316,14 @@ export default class Advertising {
   }
 
   displaySlots() {
-    this.executePlugins('displaySlots')
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.DISPLAYSLOTS)
     this.config.slots.forEach(({ id }) => {
       window.googletag.display(id)
     })
   }
 
   displayOutOfPageSlots() {
-    this.executePlugins('displayOutOfPageSlot')
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.DISPLAYOUTOFPAGESLOT)
     if (this.config.outOfPageSlots) {
       this.config.outOfPageSlots.forEach(({ id }) => {
         window.googletag.display(id)
@@ -319,14 +332,14 @@ export default class Advertising {
   }
 
   refreshInterstitialSlot() {
-    this.executePlugins('refreshInterstitialSlot')
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.REFRESHINTERSTITIALSLOT)
     if (this.interstitialSlot) {
       window.googletag.pubads().refresh([this.interstitialSlot])
     }
   }
 
-  getAdUnits(slots) {
-    return slots.reduce(
+  getAdUnits() {
+    return this.config.slots.reduce(
       (acc, currSlot) =>
         acc.concat(
           currSlot.prebid.map((currPrebid) => ({
@@ -340,19 +353,19 @@ export default class Advertising {
   }
 
   setupPrebid() {
-    this.executePlugins('setupPrebid')
-    const adUnits = this.getAdUnits(this.config.slots)
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUPPREBID)
+    const adUnits = this.getAdUnits()
     window.pbjs.addAdUnits(adUnits)
     window.pbjs.setConfig(this.config.prebid)
   }
 
   teardownPrebid() {
-    this.executePlugins('teardownPrebid')
-    this.getAdUnits(this.config.slots).forEach(({ code }) => window.pbjs.removeAdUnit(code))
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.TEARDOWNPREBID)
+    this.getAdUnits().forEach(({ code }) => window.pbjs.removeAdUnit(code))
   }
 
   setupGpt() {
-    this.executePlugins('setupGpt')
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.SETUPGPT)
     const pubads = window.googletag.pubads()
     const { targeting } = this.config
     this.defineGptSizeMappings()
@@ -374,7 +387,7 @@ export default class Advertising {
   }
 
   teardownGpt() {
-    this.executePlugins('teardownGpt')
+    this.executePlugins(this.EXECUTE_PLUGINS_ACTION.TEARDOWNGPT)
     window.googletag.destroySlots()
   }
 
